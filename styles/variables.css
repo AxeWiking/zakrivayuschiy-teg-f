@@ -1,1 +1,14 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --variative-font-family: 'Inter';
+  --accent-font-family: 'Press Start 2P';
+  --font-primary-weight: 400;
+  --font-caption-weight: 700;
+  --content--wide: clamp(375px, 65.7277dvw + 128.5211px, 1024px);
+  --whitemark-color: white;
+}
+
+@media(width <= 375px) {
+  :root {  
+    --content--wide: 100dvw;
+  }
+}
