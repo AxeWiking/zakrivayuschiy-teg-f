@@ -19,7 +19,7 @@
 }
 
 .active-button::before {
-  content: "";  
+  content: "";
   position: absolute;
   inset: 0;
   translate: -100%;

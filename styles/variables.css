@@ -11,7 +11,7 @@
 }
 
 @media(width <= 375px) {
-  :root {  
+  :root {
     --content--wide: 100dvw;
   }
 }

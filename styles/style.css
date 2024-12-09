@@ -55,7 +55,7 @@
   font-size: clamp(13.5px, 10.8304px + 0.8451vw, 25px);
   font-weight: var(--font-primary-weight, normal);
   line-height: 1.4em;
-  text-transform: uppercase;  
+  text-transform: uppercase;
 }
 
 .card {
@@ -131,7 +131,6 @@
 
 .card__icon-button {
   background-color: transparent;
-  border: none;
   padding: 0;
   border: solid 2px transparent;
 }
