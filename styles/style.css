@@ -200,7 +200,7 @@
 dialog {
   margin: auto;
   border: solid 2px var(--heart-cold-color, black);
-  transition: opacity 1s;  
+  transition: opacity 1s;
   inline-size: calc(var(--content--wide, 320px) * 2 / 3);
   min-inline-size: 320px;
 }
