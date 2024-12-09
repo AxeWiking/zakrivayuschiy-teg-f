@@ -3,8 +3,11 @@
   --accent-font-family: 'Press Start 2P';
   --font-primary-weight: 400;
   --font-caption-weight: 700;
-  --content--wide: clamp(375px, 65.7277dvw + 128.5211px, 1024px);
+  --content--wide: clamp(375px, 30.5164dvw + 260.5634px, 750px);
+  --text_color: black;
   --whitemark-color: white;
+  --heart-cold-color: blue;
+  --heart-warm-color: green;
 }
 
 @media(width <= 375px) {
