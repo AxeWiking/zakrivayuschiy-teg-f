@@ -4,10 +4,10 @@
   --font-primary-weight: 400;
   --font-caption-weight: 700;
   --content--wide: clamp(375px, 30.5164dvw + 260.5634px, 750px);
-  --text_color: black;
+  --text-color: black;
   --whitemark-color: white;
-  --heart-cold-color: blue;
-  --heart-warm-color: green;
+  --heart-cold-color: black;
+  --heart-warm-color: red;
 }
 
 @media(width <= 375px) {

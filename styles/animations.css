@@ -22,9 +22,9 @@
   content: "";
   position: absolute;
   inset: 0;
-  translate: -100%;
   background-color: rgb(from var(--heart-cold-color, black) calc(255 - r) calc(255 - g) calc(255 - b));
   transition: .5s ease-in-out;
+  translate: -100%;
   mix-blend-mode: difference;
 }
 
@@ -38,13 +38,13 @@
 }
 
 .heart-body {
-  transition: fill 30ms;
   fill: white;
+  transition: fill 30ms;
 }
 
 .heart-contour {
-  transition: fill 300ms 0ms;
   fill: white;
+  transition: fill 300ms 0ms;
 }
 
 .heart-core {
@@ -53,8 +53,8 @@
 }
 
 .heart-sparks {
-  fill: var(--heart-warm-color, red);
   opacity: 0;
+  fill: var(--heart-warm-color, red);
 }
 
 .like-icon:hover .heart-body {

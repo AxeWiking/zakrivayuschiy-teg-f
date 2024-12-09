@@ -1,20 +1,16 @@
 .page {
   margin: 0 auto;
-
   color: var(--text-color, inital);
   font-family: var(--variative-font-family, sans-serif);
   font-weight: var(--font-primary-weight, normal);
-  font-variation-settings: "wght" var(--font-primary-weight, 400);
   font-size: 18px;
   background-color: var(--main-background-color, inital);
   background-image:
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0 1%, #1a1a1a);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   background-attachment: fixed;
+  font-variation-settings: "wght" var(--font-primary-weight, 400);
   inline-size: var(--content--wide, 100%);
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -22,17 +18,17 @@
 
 .active-button {
   position: relative;
+  border: solid 2px var(--heart-cold-color, black);
+  padding: 8px;
   overflow: hidden;
   background-color: white;
-  padding: 8px;
   cursor: pointer;
-  border: solid 2px var(--heart-cold-color, black);
 }
 
 .button__text {
+  font-family: var(--accent-font-family, sans-serif);
   font-size: 14px;
   line-height: 12.6px;
-  font-family: var(--accent-font-family, sans-serif);
 }
 
 .header {
@@ -48,15 +44,15 @@
 }
 
 .header__logo-html {
-  font-size: clamp(48px, 43.3664px + 1.5023vw, 68px);
   font-weight: var(--font-primary-weight, normal);
+  font-size: clamp(48px, 43.3664px + 1.5023vw, 68px);
   line-height: 1.4em;
   text-transform: uppercase;
 }
 
 .header__logo-work {
-  font-size: clamp(13.5px, 10.8304px + 0.8451vw, 25px);
   font-weight: var(--font-primary-weight, normal);
+  font-size: clamp(13.5px, 10.8304px + 0.8451vw, 25px);
   line-height: 1.4em;
   text-transform: uppercase;
 }
@@ -72,12 +68,12 @@
 }
 
 .card__title {
+  border-bottom: solid 2px var(--heart-cold-color, black);
+  padding: 5px;
   font-weight: var(--font-caption-weight, bold);
-  font-variation-settings: "wght" var(--font-caption-weight, 700);
   font-size: 18px;
   line-height: 1.2em;
-  padding: 5px;
-  border-bottom: solid 2px var(--heart-cold-color, black);
+  font-variation-settings: "wght" var(--font-caption-weight, 700);
 }
 
 .card__portrayal {
@@ -97,34 +93,34 @@
 }
 
 .card__text {
+  margin: 25px;
   font-size: 18px;
   line-height: 21px;
-  margin: 25px;
 }
 
 .card__portrayal-whitemark {
   position: absolute;
   top: 27px;
   right: calc(3.6923vw - 0.8464px);
+  color: black;
   font-family: var(--accent-font-family, sans-serif);
   font-size: 14px;
   text-align: left;
-  mix-blend-mode: hard-light;
-  color: black;
   text-shadow: 
     -1px 0 var(--whitemark-color, white),
     0  1px var(--whitemark-color, white),
     1px  0 var(--whitemark-color, white),
     0 -1px var(--whitemark-color, white);
+  mix-blend-mode: hard-light;
 
   @supports (-webkit-text-stroke: 1px white) {
-    -webkit-text-stroke: 1px var(--whitemark-color, white);
     text-shadow: none;
+    -webkit-text-stroke: 1px var(--whitemark-color, white);
   }
 
   @supports (text-stroke: 1px white) {
-    text-stroke: 1px var(--whitemark-color, white);
     text-shadow: none;
+    text-stroke: 1px var(--whitemark-color, white);
   }
 }
 
@@ -132,15 +128,15 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  align-self: flex-end;
   gap: 5px;
+  align-self: flex-end;
   margin: 25px;
 }
 
 .card__icon-button {
-  background-color: transparent;
-  padding: 0;
   border: solid 2px transparent;
+  padding: 0;
+  background-color: transparent;
 }
 
 .card__icon-button:focus-visible {
@@ -195,8 +191,48 @@
 
 .footer__save-text {
   display: block;
+  padding: 10px;
+  font-family: var(--accent-font-family, sans-serif);
   font-size: 14px;
   line-height: 12.6px;
+}
+
+dialog {
+  margin: auto;
+  border: solid 2px var(--heart-cold-color, black);
+  transition: opacity 1s;  
+  inline-size: calc(var(--content--wide, 320px) * 2 / 3);
+  min-inline-size: 320px;
+}
+
+dialog:not([open]) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.3);
+  backdrop-filter: brightness(50%) blur(5px);
+}
+
+.dialog__content {
+  display: grid;
+  grid-template-columns: auto minmax(min-content, 1fr);
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
+  gap: 25px;
+}
+
+.dialog__label {
   font-family: var(--accent-font-family, sans-serif);
-  padding: 10px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.dialog__close {
+  grid-column: span 2;
+  font-family: var(--accent-font-family, sans-serif);
+  font-size: 14px;
+  line-height: 12.6px;
+  text-transform: uppercase;
 }
