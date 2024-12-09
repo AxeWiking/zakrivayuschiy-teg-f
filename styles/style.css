@@ -7,7 +7,10 @@
   font-variation-settings: "wght" var(--font-primary-weight, 400);
   font-size: 18px;
   background-color: var(--main-background-color, inital);
-  background-image: var(--cover-image, url(../images/background.png));
+  background-image:
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0 1%, #1a1a1a);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -59,13 +62,22 @@
 }
 
 .card {
-  margin: 54px 0;
+  margin: 50px 0;
   border: solid 2px var(--heart-cold-color, black);
   background-color: white;
 }
 
 .card:last-child {
   margin-bottom: 0;
+}
+
+.card__title {
+  font-weight: var(--font-caption-weight, bold);
+  font-variation-settings: "wght" var(--font-caption-weight, 700);
+  font-size: 18px;
+  line-height: 1.2em;
+  padding: 5px;
+  border-bottom: solid 2px var(--heart-cold-color, black);
 }
 
 .card__portrayal {
@@ -80,12 +92,8 @@
   inline-size: 100%;
 }
 
-.card__title {
-  font-weight: var(--font-caption-weight, bold);
-  font-variation-settings: "wght" var(--font-caption-weight, 700);
-  font-size: 18px;
-  line-height: 1.2em;
-  margin: 5px;
+.card__story {
+  border-top: solid 2px var(--heart-cold-color, black);
 }
 
 .card__text {
