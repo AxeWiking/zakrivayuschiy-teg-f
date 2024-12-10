@@ -177,17 +177,36 @@
 }
 
 .effect-doit {
-  filter: hue-rotate(0.25turn) blur(5px) contrast(55%) brightness(110%);
+  filter: grayscale(45%) hue-rotate(45deg) contrast(75%) blur(3px);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer__save-button {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-items: center;
   align-items: center;
   gap: 8px;
 
-  margin: 50px auto;
+  margin: 45px 34px;
 }
+
+@media(width <= 500px) {
+  .footer__save-button {
+    grid-template-columns: auto;
+  }
+
+  .footer__save-button .save-icon {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+}
+
 
 .footer__save-text {
   display: block;
@@ -195,13 +214,14 @@
   font-family: var(--accent-font-family, sans-serif);
   font-size: 14px;
   line-height: 12.6px;
+  text-wrap: nowrap;
 }
 
 dialog {
   margin: auto;
   border: solid 2px var(--heart-cold-color, black);
   transition: opacity 1s;
-  inline-size: calc(var(--content--wide, 320px) * 2 / 3);
+  inline-size: calc(var(--content--wide, 320px) / 2 - 15px);
   min-inline-size: 320px;
 }
 
@@ -227,6 +247,7 @@ dialog::backdrop {
   font-family: var(--accent-font-family, sans-serif);
   font-size: 14px;
   line-height: 21px;
+  text-transform: uppercase;
 }
 
 .dialog__close {
