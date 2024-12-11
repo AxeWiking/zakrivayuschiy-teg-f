@@ -25,7 +25,7 @@
   overflow: hidden;
   background-color: white;
   transition: 300ms ease;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 .active-button:focus-visible {
