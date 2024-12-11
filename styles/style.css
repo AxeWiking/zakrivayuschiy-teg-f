@@ -72,6 +72,7 @@
   border: solid 2px var(--heart-cold-color, black);
   background-color: white;
   block-size: 100%;
+  container-type: inline-size;
 }
 
 .card__title {
@@ -184,7 +185,7 @@
 }
 
 .effect-blur {
-  filter: blur(calc(var(--content--wide) / 50));
+  filter: blur(3cqw);
 }
 
 .effect-filter-mix {
