@@ -36,8 +36,8 @@
   text-align: center;
 
   @media (width <= 375px) {
-    padding: 110px 0 114px;
     gap: 10px;
+    padding: 110px 0 114px;
   } 
 }
 
@@ -63,17 +63,17 @@
   gap: 50px;
 }
 
-.card {
-  block-size: 100%;  
+.card {  
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto auto 1fr;
 
 
   flex-direction: column;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto 1fr;
   justify-content: space-between;
   border: solid 2px var(--heart-cold-color, black);
   background-color: white;
+  block-size: 100%;
 }
 
 .card__title {
@@ -115,6 +115,7 @@
   position: absolute;
   top: 25px;
   right: 3.5%;
+  opacity: 50%;
   color: black;
   font-family: var(--accent-font-family, fantasy);
   font-size: 14px;
@@ -124,7 +125,6 @@
     0  1px var(--whitemark-color, white),
     1px  0 var(--whitemark-color, white),
     0 -1px var(--whitemark-color, white);
-  opacity: 50%;
   mix-blend-mode: hard-light;
 
   @supports (-webkit-text-stroke: 1px white) {
@@ -232,9 +232,9 @@
 dialog {
   margin: auto;
   border: solid 2px var(--heart-cold-color, black);
+  overflow: hidden;
   transition: opacity 1s;
   inline-size: calc(var(--content--wide, 330px) / 2);
-  overflow: hidden;
 }
 
 @media(width <= 1024px) {
@@ -263,8 +263,8 @@ dialog::backdrop {
   grid-template-columns: auto minmax(min-content, 1fr);
   grid-template-rows: repeat(2, auto);
   align-items: center;
-  column-gap: 20px;
   row-gap: 34px;
+  column-gap: 20px;
   padding: 15px 10px;
 }
 
