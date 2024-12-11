@@ -18,6 +18,20 @@
   }
 }
 
+.active-button {
+  position: relative;
+  border: solid 2px var(--heart-cold-color, black);
+  padding: 8px;
+  overflow: hidden;
+  background-color: white;
+  cursor: pointer;
+  transition: 300ms ease;  
+}
+
+.active-button:focus-visible {
+  box-shadow: 2px 2px var(--heart-cold-color, black);
+}
+
 .active-button::before {
   content: "";
   position: absolute;
@@ -32,22 +46,17 @@
   translate: 0;
 }
 
-.active-button:focus-visible {
-  box-shadow: 2px 2px var(--heart-cold-color, black);
-  transition: 300ms ease;
+.heart-core {
+  fill: white;
+  transition: fill linear 300ms 30ms;
 }
 
-.heart-body {
+.heart-main-body {
   fill: white;
-  transition: fill 30ms;
+  transition: fill 300ms linear;
 }
 
 .heart-contour {
-  fill: white;
-  transition: fill 300ms 0ms;
-}
-
-.heart-core {
   fill: var(--heart-cold-color, black);
   transition: fill linear 100ms;
 }
@@ -57,29 +66,39 @@
   fill: var(--heart-warm-color, red);
 }
 
-.like-icon:hover .heart-body {
+.like-icon:hover .heart-core {
   fill: var(--heart-cold-color, black);
-  transition: fill 300ms;
+  transition: fill linear 300ms;
 }
 
-.like-icon:active .heart-body, .like-icon.is-liked .heart-body {
+.like-icon:active .heart-core {
   fill: var(--heart-warm-color, red);
-  transition: fill 300ms;
+  transition: fill linear 300ms;
 }
 
-.like-icon:hover .heart-contour {
+.like-icon:hover .heart-main-body {
   fill: var(--heart-cold-color, black);
-  transition: fill 300ms 50ms;
+  transition: fill linear 300ms 50ms;
 }
 
-.like-icon:active .heart-contour, .like-icon.is-liked .heart-contour {
+.like-icon:active .heart-main-body {
   fill: var(--heart-warm-color, red);
-  transition: fill 300ms 50ms;
+  transition: fill linear 300ms 50ms;
+}
+
+.like-icon.is-liked .heart-contour {
+  fill: var(--heart-warm-color, red);
+  transition: fill linear 300ms 60ms;
 }
 
 .like-icon.is-liked .heart-core {
   fill: var(--heart-warm-color, red);
-  transition: fill 300ms 60ms;
+  transition: fill linear 300ms;
+}
+
+.like-icon.is-liked .heart-main-body {
+  fill: var(--heart-warm-color, red);
+  transition: fill linear 300ms 50ms;
 }
 
 .like-icon.is-liked .heart-sparks {

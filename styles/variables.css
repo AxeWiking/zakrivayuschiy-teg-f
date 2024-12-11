@@ -10,8 +10,14 @@
   --heart-warm-color: red;
 }
 
-@media(width <= 375px) {
+@media (width <= 375px) {
   :root {
     --content--wide: 100dvw;
+  }
+}
+
+@media (width >= 1440px) {
+  :root {
+    --content--wide: max(700px, 100dvw - 740px);
   }
 }
