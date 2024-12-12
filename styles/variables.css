@@ -3,7 +3,7 @@
   --accent-font-family: 'Press Start 2P';
   --font-primary-weight: 400;
   --font-caption-weight: 700;
-  --content--wide: clamp(375px, 30.5164dvw + 260.5634px, 750px);
+  --content--wide: max(375px, 30.5164dvw + 260.5634px);
   --text-color: black;
   --whitemark-color: white;
   --heart-cold-color: black;
@@ -13,11 +13,5 @@
 @media (width <= 375px) {
   :root {
     --content--wide: 100dvw;
-  }
-}
-
-@media (width >= 1440px) {
-  :root {
-    --content--wide: max(700px, 100dvw - 740px);
   }
 }

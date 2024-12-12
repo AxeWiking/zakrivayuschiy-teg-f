@@ -57,7 +57,7 @@
 
 .posts__list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-template-columns: minmax(330px, 1fr);
   grid-auto-flow: row;
   align-items: stretch;
   gap: 50px;
@@ -65,10 +65,8 @@
 
 .card {
   display: grid;
-  flex-direction: column;
   grid-template-columns: auto;
   grid-template-rows: auto auto auto 1fr;
-  justify-content: space-between;
   border: solid 2px var(--heart-cold-color, black);
   background-color: white;
   block-size: 100%;
@@ -101,13 +99,9 @@
 }
 
 .card__text {
-  margin: 25px;
+  padding: 25px 25px 0;
   font-size: 18px;
   line-height: 21px;
-}
-
-.card__text:last-child {
-  margin-bottom: 0;
 }
 
 .card__portrayal-whitemark {
@@ -161,6 +155,7 @@
 }
 
 .card__like-button {
+  padding: 8px;  
   min-inline-size: 130px;
 }
 
@@ -189,7 +184,7 @@
 }
 
 .effect-filter-mix {
-  filter: grayscale(45%) hue-rotate(45deg) contrast(75%) blur(3px);
+  filter: grayscale(45%) hue-rotate(45deg) contrast(75%) blur(.5cqw);
 }
 
 .save {
@@ -203,9 +198,14 @@
   grid-template-columns: repeat(2, auto);
   justify-items: center;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 
-  margin: 45px 34px;
+  margin: 50px 30px 100px;
+  padding: 15px 18px;
+}
+
+.floppy-icon {
+  object-fit: cover;
 }
 
 @media(width <= 500px) {
@@ -221,7 +221,6 @@
 
 .save__button-text {
   display: block;
-  padding: 10px;
   font-family: var(--accent-font-family, fantasy);
   font-size: 14px;
   line-height: 12.6px;
@@ -278,6 +277,7 @@ dialog::backdrop {
   grid-column: span 2;
   font-family: var(--accent-font-family, fantasy);
   font-size: 14px;
+  padding: 9px 17px;
   line-height: 12.6px;
   text-transform: uppercase;
 }

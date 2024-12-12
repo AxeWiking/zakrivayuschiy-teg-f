@@ -21,7 +21,6 @@
 .active-button {
   position: relative;
   border: solid 2px var(--heart-cold-color, black);
-  padding: 8px;
   overflow: hidden;
   background-color: white;
   transition: 300ms ease;
