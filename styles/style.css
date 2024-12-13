@@ -10,7 +10,10 @@
     repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0 1%, #1a1a1a);
   background-attachment: fixed;
-  font-variation-settings: "wght" var(--font-primary-weight, 400);
+  font-weight: var(--font-primary-weight, 400);
+  @supports (font-variation-settings: "wgth" 400) {
+    font-variation-settings: "wght" var(--font-primary-weight, 400);
+  }
   inline-size: var(--content--wide, 100%);
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -82,7 +85,10 @@
   font-weight: var(--font-caption-weight, bold);
   font-size: 18px;
   line-height: 1.2em;
-  font-variation-settings: "wght" var(--font-caption-weight, 700);
+  font-weight: var(--font-caption-weight, 700);
+  @supports (font-variation-settings: "wgth" 700) {
+    font-variation-settings: "wght" var(--font-caption-weight, 700);
+  }
 }
 
 .card__portrayal {
