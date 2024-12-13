@@ -2,7 +2,6 @@
   margin: 0 auto;
   color: var(--text-color, inital);
   font-family: var(--variative-font-family, sans-serif);
-  font-weight: var(--font-primary-weight, normal);
   font-size: 18px;
   background-color: var(--main-background-color, inital);
   background-image:
@@ -10,7 +9,7 @@
     repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0 1%, #1a1a1a);
   background-attachment: fixed;
-  font-weight: var(--font-primary-weight, 400);
+  font-weight: var(--font-primary-weight, normal);
   @supports (font-variation-settings: "wgth" 400) {
     font-variation-settings: "wght" var(--font-primary-weight, 400);
   }
@@ -82,10 +81,9 @@
 .card__title {
   border-bottom: solid 2px var(--heart-cold-color, black);
   padding: 5px 10px;
-  font-weight: var(--font-caption-weight, bold);
   font-size: 18px;
   line-height: 1.2em;
-  font-weight: var(--font-caption-weight, 700);
+  font-weight: var(--font-caption-weight, bold);
   @supports (font-variation-settings: "wgth" 700) {
     font-variation-settings: "wght" var(--font-caption-weight, 700);
   }
